@@ -1,7 +1,7 @@
 This project implements a console-based tennis match scoring application in Java.
 
 The application models a real tennis match, including:
-Point scoring (Love, 15, 30, 40, Deuce, Advantage)
+  - Point scoring (Love, 15, 30, 40, Deuce, Advantage)
   - Game scoring
   - Set scoring (win by 2 games)
   - Match scoring (configurable best-of-N sets)
