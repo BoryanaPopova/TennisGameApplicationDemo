@@ -9,7 +9,9 @@ The application models a real tennis match, including:
 
 Core Components: 
   - Player - represents a tennis player
-  - Game - Implements the tennis game scoring rules
+  - Point - enum representing the game point states
+  - Game - Interface, representing the tennis game
+  - StandardGame - implements the scoring rules for the standard tennis game
   - Set - Implementation that manages the games within a set
   - Match - Implementation that manages the sets within a match
   - TennisMatchController - Handles console input/output
