@@ -11,7 +11,7 @@ public class TennisMatchController {
         System.out.print("Enter name for player 1: ");
         Player p1 = new Player(scanner.nextLine());
 
-        System.out.print("Enter name for player Player 2: ");
+        System.out.print("Enter name for player 2: ");
         Player p2 = new Player(scanner.nextLine());
 
         Match match = new Match(p1, p2, 2); // Best of 3
