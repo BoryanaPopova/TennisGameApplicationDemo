@@ -8,15 +8,15 @@ public class TennisMatchController {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("TennisComponents.Player 1: ");
+        System.out.print("Enter name for player 1: ");
         Player p1 = new Player(scanner.nextLine());
 
-        System.out.print("TennisComponents.Player 2: ");
+        System.out.print("Enter name for player Player 2: ");
         Player p2 = new Player(scanner.nextLine());
 
         Match match = new Match(p1, p2, 2); // Best of 3
 
-        System.out.println("🎾 TennisComponents.Match Started 🎾");
+        System.out.println("🎾Match Started 🎾");
 
         while (match.isFinished()) {
 

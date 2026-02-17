@@ -10,24 +10,24 @@ public class Set {
     private final Player player2;
 
     private final Map<Player, Integer> games = new HashMap<>();
-    private Game currentGame;
+    private StandardGame currentStandardGame;
 
     public Set(Player p1, Player p2) {
         this.player1 = p1;
         this.player2 = p2;
         games.put(p1, 0);
         games.put(p2, 0);
-        currentGame = new Game(p1, p2);
+        currentStandardGame = new StandardGame(p1, p2);
     }
 
     public void pointWonBy(Player player) {
 
-        currentGame.pointWonBy(player);
+        currentStandardGame.pointWonBy(player);
 
-        if (currentGame.isFinished()) {
-            Player winner = currentGame.getWinner();
+        if (currentStandardGame.isFinished()) {
+            Player winner = currentStandardGame.getWinner();
             games.put(winner, games.get(winner) + 1);
-            currentGame = new Game(player1, player2);
+            currentStandardGame = new StandardGame(player1, player2);
         }
     }
 
@@ -47,7 +47,7 @@ public class Set {
         return games.get(player1) + " - " + games.get(player2);
     }
 
-    public Game getCurrentGame() {
-        return currentGame;
+    public StandardGame getCurrentGame() {
+        return currentStandardGame;
     }
 }
